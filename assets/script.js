@@ -6,6 +6,7 @@ const fruitNutrition = document.querySelector("#nutritionSection p")
 let cal = 0
 
 const fruitList = document.querySelector("#fruitSection ul")
+const fruitImage = document.querySelector("#nutritionSection ul")
 
 const addFruit = fruit => {
     //add fruit submitted to list
@@ -21,9 +22,28 @@ const addFruit = fruit => {
         //update cal after fruit removed
         fruitNutrition.textContent = (cal===0 ? "" :`Total calories: ${cal}`)
     }, {once:true})
-
     //running total of salad cal
     fruitNutrition.textContent = `Total calories: ${cal}`
+    //add fruit image
+    fetchFruitImage(fruit)
+}
+
+//fetch image of fruit
+const fetchFruitImage = async (fruit) => {
+    try{
+        const resp = await fetch(`https://pixabay.com/api/?key=37050473-40f569f988404354c061a5e77&q=${fruit}&image_type=photo`)
+        if (resp.ok){
+            const data = await resp.json()
+        } else {
+            throw "Error: http status code = " + resp.status
+        }
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+const addImage = fruit => {
+    fruitImage.src=
 }
 
 // const fetchFruitData = (fruit) => {
@@ -49,6 +69,20 @@ const fetchFruitData = async (fruit) => {
         console.log(err)
         alert("Fruit not found.")
     }
+    //fetch image of fruit
+    const fetchFruitImage = async (fruit) => {
+        try{
+            const resp = await fetch(`https://pixabay.com/api/?key=37050473-40f569f988404354c061a5e77&q=${fruit}&image_type=photo`)
+            if (resp.ok){
+                const data = await resp.json()
+                addImage(data)
+            } else {
+                throw "Error: http status code = " + resp.status
+            }
+        } catch (err) {
+            console.log(err)
+        }
+}
 }
 
 const extractFruit = e => {
