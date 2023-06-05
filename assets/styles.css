@@ -1,0 +1,17 @@
+body{
+    background-color: plum;
+}
+
+label{
+    background-color: white;
+}
+
+#fruitSection li:hover:after{
+    font-weight:bold;
+    content: " X";
+    color: red;
+}
+
+
+
+
