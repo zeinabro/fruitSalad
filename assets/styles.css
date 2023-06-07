@@ -1,17 +1,86 @@
 body{
     background-color: plum;
+    background-image: url("fruityAPI.jpg");
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    
+    
 }
-
+h1 {
+   color: #FFE569;
+   font-size: 4rem;
+   text-align: center;
+   padding-bottom: 50px;
+}
 label{
     background-color: white;
+    border-radius: 150px;
+    border-style: none;
+    padding: 1%;
+    background-color: #FFE569;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    
+
+}
+
+input {
+    border-radius: 150px;
+    border-style: none;
+    padding: 1%;
+    background-color: #FFE569;
+    color: black;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+
 }
 
 #fruitSection li:hover:after{
     font-weight:bold;
     content: " X";
     color: red;
+    
 }
 
+p{
+    font-family: 'Rubik', sans-serif;
+    color: #D0F5BE;
+    font-size: 1.5rem;
+    
+}
 
+ul {
+    list-style-type: none;
+    display: inline-block;
+    justify-content: space-between;
+    font-family: 'Rubik', sans-serif;
+    
 
+}
 
+li {
+    font-family: 'Rubik', sans-serif;
+    color: #FFE569;
+    font-size: 1.5rem;
+    padding-top: 10%;
+    line-height: normal;
+    padding-top: 6%;
+
+}
+
+img {
+    border-radius: 250%;
+    width: 100px;
+    height: 100px;
+    object-fit: none;
+    
+
+}
+
+form {
+    padding-top: 5%;
+}
