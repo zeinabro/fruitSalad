@@ -4,15 +4,16 @@ body{
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
-    
-    
+        
 }
+
 h1 {
    color: #FFE569;
    font-size: 4rem;
    text-align: center;
    padding-bottom: 50px;
 }
+
 label{
     background-color: white;
     border-radius: 150px;
@@ -24,7 +25,6 @@ label{
     font-size: 1rem;
     font-weight: bold;
     
-
 }
 
 input {
@@ -46,12 +46,12 @@ input {
     
 }
 
+
 p{
     font-family: 'Rubik', sans-serif;
     color: #D0F5BE;
     font-size: 1.5rem;
-    
-}
+ }
 
 ul {
     list-style-type: none;
@@ -59,7 +59,6 @@ ul {
     justify-content: space-between;
     font-family: 'Rubik', sans-serif;
     
-
 }
 
 li {
