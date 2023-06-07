@@ -17,7 +17,7 @@ const addFruit = async (fruitData) => {
     // update calories total
     cal+=fruitData.nutritions.calories
     
-    //await for process to be completed
+    //await for process to be completed before retrieving value
     let imageData = await fetchFruitImage(fruitData)
     //get img tag + display image
     let img=addImage(imageData,fruitData)
@@ -70,7 +70,9 @@ const addImage = (imageData,fruitData) => {
 const fetchFruitData = async (fruit) => {
     try {
         //await to fetch data before anything else
-        const resp = await fetch(`https://fruity-api.onrender.com/api/fruits/${fruit}`)
+        //const resp = await fetch(`https://fruity-api.onrender.com/api/fruits/${fruit}`)
+        //linked my api
+        const resp = await fetch(`https://myfruitapi-x0jh.onrender.com/fruits/${fruit}`)
         if (resp.ok){
             const fruitData = await resp.json()
             addFruit(fruitData)
