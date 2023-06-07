@@ -12,6 +12,9 @@ label{
     color: red;
 }
 
+.fruitImage li{
+    display:inline
+}
 
 
 
